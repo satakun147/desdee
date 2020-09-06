@@ -6,13 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="625dp"
+        android:layout_height="1200dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constrainttop_toBottomOf="parent"
+        app:srcCompat="@drawable/speed_meter"
+        tools:layout_editor_absoluteY="-18dp"
+        android:contentDescription="@string/a" />
+
     <TextView
+        android:id="@+id/textapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/app_name"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <EditText
+        android:id="@+id/editTextDistance"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="#DADADA"
+        android:ems="10"
+        android:hint="@string/dis"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textapp"
+        app:layout_constraintStart_toStartOf="@+id/textapp"
+        app:layout_constraintTop_toBottomOf="@+id/textapp"
+        app:layout_constraintVertical_bias="0.034"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTexttime"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:background="#DADADA"
+        android:ems="10"
+        android:hint="@string/time"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDistance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDistance"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDistance"
+        app:layout_constraintVertical_bias="0.0"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/clearbutton"
+        android:layout_width="70dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/clear"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/editTexttime"
+        app:layout_constraintTop_toBottomOf="@+id/editTexttime" />
+
+    <Button
+        android:id="@+id/calbutton"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/dis"
+        android:text="@string/cal"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTexttime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clearbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editTexttime" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/speed"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/calbutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/clearbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editTexttime" />
+
+    <EditText
+        android:id="@+id/editTextSpeed"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:background="#FFFFFF"
+        android:text=""
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textSpeed"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/textSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/textSpeed"
+        app:layout_constraintVertical_bias="0.010"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
