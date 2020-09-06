@@ -7,16 +7,31 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="625dp"
-        android:layout_height="1200dp"
-        android:background="#000000"
+        android:id="@+id/imageView2"
+        android:layout_width="693dp"
+        android:layout_height="700dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_dark" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="924dp"
+        android:layout_height="345dp"
+        android:layout_marginTop="281dp"
+        android:background="#050000"
+        android:contentDescription="@string/a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,625:1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSpeed"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constrainttop_toBottomOf="parent"
-        app:srcCompat="@drawable/speed_meter"
-        tools:layout_editor_absoluteY="-18dp"
-        android:contentDescription="@string/a" />
+        app:srcCompat="@drawable/speed_meter" />
 
     <TextView
         android:id="@+id/textapp"
@@ -114,5 +129,15 @@
         app:layout_constraintStart_toStartOf="@+id/textSpeed"
         app:layout_constraintTop_toBottomOf="@+id/textSpeed"
         app:layout_constraintVertical_bias="0.010"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="86dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/red_cow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
